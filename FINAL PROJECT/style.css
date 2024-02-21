@@ -11,9 +11,51 @@ header {
   background-color: #f0f0f0;
 }
 
-.logo img {
-  height: 50px;
+/* Penyesuaian CSS untuk footer */
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Menyelaraskan item ke kiri dan kanan */
+  align-items: center; /* Menyelaraskan item vertikal */
 }
+
+#map {
+  height: 200px; /* Atau tinggi yang diinginkan */
+  width: 50%; /* Menetapkan lebar peta menjadi separuh dari footer */
+  /* Tambahkan border atau padding jika diperlukan */
+}
+
+.contact-info {
+  width: 50%; /* Menetapkan lebar info kontak menjadi separuh dari footer */
+  padding: 10px; /* Menambahkan sedikit padding */
+  text-align: left; /* Menyelaraskan teks ke kiri */
+}
+
+footer {
+  padding: 10px 0; /* Mengurangi padding atas dan bawah */
+  font-size: 0.8em; /* Menyesuaikan ukuran font */
+  /* Sesuaikan warna dan styling lain jika diperlukan */
+}
+
+@media screen and (max-width: 600px) {
+  .footer-content {
+      flex-direction: column; /* Menumpuk konten secara vertikal pada layar kecil */
+  }
+
+  #map,
+  .contact-info {
+      width: 100%; /* Mengambil lebar penuh pada tampilan mobile */
+  }
+}
+
+
+
+/* CSS to make the logo circular */
+.logo img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%; /* This will make the logo circular */
+}
+
 
 .navbar {
   list-style: none;
@@ -59,7 +101,7 @@ footer {
 }
 
 .profile img {
-  height: 40px;
+  height: 70px;
   cursor: pointer;
 }
 
