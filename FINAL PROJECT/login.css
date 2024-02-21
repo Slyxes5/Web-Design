@@ -1,78 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url();
-    background-size: cover;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg');
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: rgba(75, 54, 33, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 400px;
+}
+
+.login-header {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-btn {
+  background-color: #b66700;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.login-btn:hover {
+  background-color: #b66700;
+}
+
+.forgot-password {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forgot-password a {
+  text-decoration: none;
+  color: #b66700;
+}
+
+.signup-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+      flex-direction: column;
+      padding: 20px;
   }
-  
+
   .login-container {
-        background-color: rgba(75, 54, 33, 0.8); /* Coklat gelap semi transparan */
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 40px;
-        width: 400px;
-      }
-      
-  
+      width: 100%; /* Make the login container take full width */
+      padding: 20px;
+  }
+
   .login-header {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 20px;
+      font-size: 24px; /* Adjust font size for smaller screens */
   }
-  
-  .form-group {
-    margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .form-group label, .form-group input, .login-btn {
+      font-size: 14px; /* Further reduce font size for very small screens */
   }
-  
-  label {
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .login-btn {
-    background-color: #0073b1;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-  }
-  
-  .login-btn:hover {
-    background-color: #005c90;
-  }
-  
-  .forgot-password {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .forgot-password a {
-    text-decoration: none;
-    color: #0073b1;
-  }
-  
-  .signup-link {
-    margin-top: 20px;
-    text-align: center
-  }  
+}

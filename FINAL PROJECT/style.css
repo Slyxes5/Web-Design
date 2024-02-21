@@ -1,6 +1,10 @@
 /* style.css */
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(/src/bckgr.webp);
+  background-size:auto;
 }
 
 header {
@@ -8,14 +12,18 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: rgba(75, 54, 33, 0.8);
 }
 
 /* Penyesuaian CSS untuk footer */
-.footer-content {
-  display: flex;
-  justify-content: space-between; /* Menyelaraskan item ke kiri dan kanan */
-  align-items: center; /* Menyelaraskan item vertikal */
+footer {
+  background-color: rgba(75, 54, 33, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 #map {
@@ -30,31 +38,12 @@ header {
   text-align: left; /* Menyelaraskan teks ke kiri */
 }
 
-footer {
-  padding: 10px 0; /* Mengurangi padding atas dan bawah */
-  font-size: 0.8em; /* Menyesuaikan ukuran font */
-  /* Sesuaikan warna dan styling lain jika diperlukan */
-}
-
-@media screen and (max-width: 600px) {
-  .footer-content {
-      flex-direction: column; /* Menumpuk konten secara vertikal pada layar kecil */
-  }
-
-  #map,
-  .contact-info {
-      width: 100%; /* Mengambil lebar penuh pada tampilan mobile */
-  }
-}
-
-
 /* CSS to make the logo circular */
 .logo img {
   height: 80px;
   width: 80px;
   border-radius: 50%; /* This will make the logo circular */
 }
-
 
 .navbar {
   list-style: none;
@@ -64,19 +53,9 @@ footer {
 
 .navbar li a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
+  font-style: bold;
 }
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
 .content {
   display: flex;
   justify-content: center;
