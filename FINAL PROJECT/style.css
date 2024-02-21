@@ -48,7 +48,6 @@ footer {
 }
 
 
-
 /* CSS to make the logo circular */
 .logo img {
   height: 80px;
@@ -101,7 +100,7 @@ footer {
 }
 
 .profile img {
-  height: 70px;
+  height: 40px;
   cursor: pointer;
 }
 
