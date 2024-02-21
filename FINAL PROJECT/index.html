@@ -19,7 +19,15 @@
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
+        <div class="profile">
+            <img src="/FINAL PROJECT/src/profile.png" alt="Profile" id="profileIcon">
+            <div class="profile-dropdown" id="profileDropdown">
+                <a href="#">Sign Up</a>
+                <a href="#">Account Settings</a>
+            </div>
+        </div>
     </header>
+    
     <main>
         <section class="content">
             <img src="foto-content.jpg" alt="Content">
@@ -31,5 +39,24 @@
         <p>Telepon: +62 81350725166</p>
         <p>Email: Coffe@contoh.com</p>
     </footer>
+    <script>
+        document.getElementById("profileIcon").onclick = function() {
+            document.getElementById("profileDropdown").style.display = "block";
+        };
+        
+        // Tutup dropdown jika klik di luar
+        window.onclick = function(event) {
+          if (!event.target.matches('#profileIcon')) {
+            var dropdowns = document.getElementsByClassName("profile-dropdown");
+            for (var i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+              }
+            }
+          }
+        };
+        </script>
+
 </body>
 </html>

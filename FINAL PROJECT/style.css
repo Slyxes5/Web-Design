@@ -36,7 +36,7 @@ footer {
   width: 100%;
 }
 
-.advertisement {
+.content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,10 +44,42 @@ footer {
   padding: 20px;
 }
 
-.advertisement img {
+.content img {
   width: 50%;
 }
 
-.advertisement p {
+.content p {
   width: 50%;
+}
+
+/* Profile styling */
+.profile {
+  position: relative;
+  display: inline-block;
+}
+
+.profile img {
+  height: 40px;
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.profile-dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.profile-dropdown a:hover {
+  background-color: #f1f1f1;
 }
