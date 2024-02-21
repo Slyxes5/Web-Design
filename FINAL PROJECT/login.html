@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Our Website</title>
+<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <div id="login-form" class="login-container">
+      <h2 class="login-header">Login</h2>
+      <form id="login-form" class="login-form" action="#" method="post">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="button" onclick="login()" class="login-btn">Login</button>
+        <div class="forgot-password">
+            <a href="#">Forgot password?</a>
+          </div>
+      </form>
+      <div class="signup-link">
+        <span>New user?</span>
+        <a href="#">Sign up</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      // Mendapatkan nilai username dan password dari input form
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Contoh sederhana validasi login (biasanya akan dilakukan di sisi server)
+      if (username === 'user' && password === '12345') {
+        // Jika login berhasil, arahkan pengguna ke halaman yang sesuai
+        window.location.href = 'index.html';
+      } else {
+        // Jika login gagal, beri tahu pengguna
+        alert('Username or password incorrect. Please try again.');
+      }
+    }
+  </script>
+</body>
+</html>
