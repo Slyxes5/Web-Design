@@ -4,21 +4,25 @@ body {
   padding: 0;
   background-image: url('https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg');
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 5%; /* Added padding */
 }
 
 .login-container {
   background-color: rgba(75, 54, 33, 0.8);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  width: 400px;
+  padding: 5%; /* Updated padding */
+  width: 90%; /* Updated width */
+  max-width: 400px; /* Added max-width */
 }
 
 .login-header {
@@ -28,7 +32,7 @@ body {
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 5%; /* Updated margin */
 }
 
 label {
@@ -40,30 +44,32 @@ label {
 
 input[type="text"],
 input[type="password"] {
-  width: 100%;
-  padding: 10px;
+  width: calc(100% - 30px); /* Adjust width to account for padding */
+  padding: 15px; /* Increased padding */
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-bottom: 5%; /* Added margin */
 }
 
 .login-btn {
   background-color: #b66700;
   color: #fff;
-  padding: 10px 20px;
+  padding: 15px 0; /* Increased padding */
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 16px; /* Increased font size */
   width: 100%;
+  margin-bottom: 5%; /* Added margin */
 }
 
 .login-btn:hover {
-  background-color: #b66700;
+  background-color: #a55d00; /* Darkened the hover color */
 }
 
 .forgot-password {
-  margin-top: 20px;
   text-align: center;
+  margin-top: 5%; /* Increased space */
 }
 
 .forgot-password a {
@@ -72,29 +78,44 @@ input[type="password"] {
 }
 
 .signup-link {
-  margin-top: 20px;
   text-align: center;
+  margin-top: 5%; /* Increased space */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .container {
-      flex-direction: column;
-      padding: 20px;
-  }
-
-  .login-container {
-      width: 100%; /* Make the login container take full width */
-      padding: 20px;
-  }
-
   .login-header {
-      font-size: 24px; /* Adjust font size for smaller screens */
+    font-size: 24px; /* Adjusted font size */
   }
 }
 
 @media (max-width: 480px) {
-  .form-group label, .form-group input, .login-btn {
-      font-size: 14px; /* Further reduce font size for very small screens */
+  .login-header,
+  .form-group label,
+  .form-group input,
+  .login-btn,
+  .forgot-password a,
+  .signup-link a {
+    font-size: 16px; /* Increased font size for better readability */
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 12px; /* Adjusted padding */
+  }
+
+  .login-btn {
+    padding: 12px 0; /* Adjusted padding */
+  }
+
+  .forgot-password,
+  .signup-link {
+    margin-top: 10%; /* Increased space */
+  }
+
+  .forgot-password a,
+  .signup-link a,
+  .login-btn {
+    min-height: 44px; /* Ensures tappable area is large enough */
   }
 }
