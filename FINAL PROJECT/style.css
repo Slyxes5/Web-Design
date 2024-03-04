@@ -26,11 +26,6 @@ footer {
   width: 100%;
 }
 
-#map {
-  height: 200px; /* Atau tinggi yang diinginkan */
-  width: 50%; /* Menetapkan lebar peta menjadi separuh dari footer */
-  /* Tambahkan border atau padding jika diperlukan */
-}
 
 .contact-info {
   width: 50%; /* Menetapkan lebar info kontak menjadi separuh dari footer */
@@ -45,33 +40,54 @@ footer {
   border-radius: 50%; /* This will make the logo circular */
 }
 
-.navbar {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+nav.navbar {
+  flex: 1; /* Take remaining space */
+  text-align: center; /* Center align the navbar */
 }
 
-.navbar li a {
+nav.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav.navbar li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav.navbar li:last-child {
+  margin-right: 0;
+}
+
+nav.navbar li a {
   text-decoration: none;
   color: #ffffff;
   font-style: bold;
 }
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-}
 
-.content img {
-  width: 50%;
-}
+@media only screen and (max-width: 600px) {
+  .navbar ul {
+    display: none; /* Sembunyikan daftar menu utama */
+    position: absolute;
+    top: 100%; /* Letakkan dropdown tepat di bawah navbar */
+    left: 0;
+    background-color: rgba(75, 54, 33, 0.8); /* Warna latar belakang dropdown */
+    width: 100%; /* Lebar dropdown mengikuti lebar layar */
+    padding: 10px 0; /* Beri jarak pada atas dan bawah dropdown */
+  }
 
-.content p {
-  width: 50%;
-}
+  .navbar ul li {
+    display: block; /* Setiap menu menjadi blok */
+    margin: 0; /* Hapus margin */
+    text-align: center; /* Teks menu di tengah */
+  }
 
+  .navbar ul li a {
+    display: block; /* Teks menu menjadi blok */
+    padding: 10px 0; /* Beri jarak pada atas dan bawah teks menu */
+    color: #ffffff; /* Warna teks menu */
+  }
+}
 /* Profile styling */
 .profile {
   position: relative;
