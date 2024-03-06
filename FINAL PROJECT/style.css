@@ -15,6 +15,7 @@ header {
   background-color: rgba(75, 54, 33, 0.8);
 }
 
+
 /* Penyesuaian CSS untuk footer */
 footer {
   background-color: rgba(75, 54, 33, 0.8);
@@ -30,10 +31,11 @@ footer {
   display: none;
 }
 
-header label{
+header label {
   font-size: 20px;
   cursor: pointer;
-  display: none;
+  display: none; /* Initially hide the label */
+  text-align: center;
 }
 
 .contact-info {
@@ -74,54 +76,66 @@ nav.navbar li a {
   font-style: bold;
 }
 
-@media only screen and (max-width: 600px) {
+/* Base styles remain the same */
 
-  header{
+@media only screen and (max-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
   }
 
-  header label{
-    display: initial;
+  .logo {
+    flex: 1;
   }
 
-  header .navbar{
-    position: absolute;
-    top: 100%; left:0; right: 0;
-    background: #fff;
-    border-top: 1px solid rgba(0,0,0,0.1);
+  header label {
+    display: block; /* Show the label on mobile screens */
+    margin-left: auto; /* Push the label to the right */
+    margin-right: auto; /* Push the label to the right */
   }
 
-  header .navbar ul li{
-    width: 100%;
+  .profile {
+    flex: 1;
+    text-align: right; /* Adjust profile alignment */
   }
 
-  header .navbar ul li ul{
-    position: relative;
-    width: 100%;
+  /* Toggle menu display */
+  #menu-bar:checked ~ .navbar ul {
+    display: block;
+  }
+
+  #menu-bar {
+    display: none;
   }
 
   .navbar ul {
-    display: none; /* Sembunyikan daftar menu utama */
+    display: none;
     position: absolute;
-    top: 100%; /* Letakkan dropdown tepat di bawah navbar */
-    left: 0;
-    background-color: rgba(75, 54, 33, 0.8); /* Warna latar belakang dropdown */
-    width: 100%; /* Lebar dropdown mengikuti lebar layar */
-    padding: 10px 0; /* Beri jarak pada atas dan bawah dropdown */
+    top: 60px; /* Adjust based on your header's height */
+    right: 0;
+    background-color: rgba(75, 54, 33, 0.8);
+    width: 100%;
+    padding: 10px 0;
   }
 
   .navbar ul li {
-    display: block; /* Setiap menu menjadi blok */
-    margin: 0; /* Hapus margin */
-    text-align: center; /* Teks menu di tengah */
+    display: block;
+    text-align: center;
+    width: 100%;
   }
 
   .navbar ul li a {
-    display: block; /* Teks menu menjadi blok */
-    padding: 10px 0; /* Beri jarak pada atas dan bawah teks menu */
-    color: #ffffff; /* Warna teks menu */
+    padding: 10px 0;
+    color: #ffffff;
+    display: block;
   }
 }
+
+
+
+
 /* Profile styling */
 .profile {
   position: relative;
